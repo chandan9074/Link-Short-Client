@@ -4,6 +4,7 @@ import axios from 'axios';
 import Singup from './signup';
 import './homeStyle.css';
 import {
+    Link,
   Redirect
 } from "react-router-dom";
 
@@ -59,7 +60,7 @@ const Login = () => {
                             Invalid Username or Password
                             </div>:null}
                 <button className="login_btn" onClick={hendelLogin}>LOGIN</button>
-                <p className="sing_text">Don't have account? <a href="" onClick={clickSignup} style={{color:"salmon", cursor:"pointer"}}>Singup</a> </p>
+                <p className="sing_text">Don't have account? <Link onClick={clickSignup} style={{color:"salmon", cursor:"pointer"}}>Singup</Link> </p>
             </div>
             </div>}
             </div>}

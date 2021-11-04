@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 
 import Login from './login';
+import { Link } from 'react-router-dom';
 
 const Signup = () => {
 
@@ -9,7 +10,8 @@ const Signup = () => {
     const [incorrect, setIncorrect] = useState(false)
     const [passMatch, setPassMatch] = useState(false)
 
-    const hendleSignup=()=>{
+    const hendleSignup=(e)=>{
+        e.preventDefault();
         var f_name = document.getElementById('f_name').value;
         var l_name = document.getElementById('l_name').value;
         var username = document.getElementById('u_name').value;
