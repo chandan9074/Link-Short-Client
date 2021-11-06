@@ -31,6 +31,7 @@ const Home = () => {
             })
         }
         postUrl();
+        document.getElementById('url_inpt').value="";
 
     }
 

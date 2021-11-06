@@ -14,7 +14,7 @@ const RenderURL = (props) => {
                 headers:{'Content-Type':'application/json'}
             }
             const params = props.match.params.str;
-            axios.get(`http://127.0.0.1:8000/url_api/render_public_url/${params}/`, config).then(response=>{
+            axios.get(`https://link-short-url.herokuapp.com/url_api/render_public_url/${params}/`, config).then(response=>{
                 setUrl(response.data.given_link)
             })
         }

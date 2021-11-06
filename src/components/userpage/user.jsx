@@ -213,7 +213,7 @@ const Userpage = (props) => {
                     {urlList.length!==0?<tbody className="tbody_scroll">{urlList.map(list =>(
                         <tr className="bg_color">
                             <td className="table_data1">{list.title}</td>
-                            <td className="table_data2">https://link-short-chandan-kumar.netlify.app/{list.short_link}/</td>
+                            <td className="table_data2">https://link-short-url.herokuapp.com/{list.short_link}/</td>
                             <td className="table_data3"><button className="del_btn" onClick={()=>handleDelete(list.id)} >Delete</button></td>
                         </tr>
                     ))}</tbody>:<tr><td style={{textAlign:"center"}}> <img style={{width:"14vh", height:"14vh"}} src={not_f} alt="not found"/> </td></tr>}
