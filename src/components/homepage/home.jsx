@@ -25,8 +25,8 @@ const Home = () => {
             var config={
                 headers:{'Content-Type':'application/json'}
             }
-            axios.post('http://127.0.0.1:8000/url_api/create_public_link/', url_data, config).then(response=>{
-                setUrl("http://localhost:3000/"+response.data.short_link+"/")
+            axios.post('https://link-short-url.herokuapp.com/url_api/create_public_link/', url_data, config).then(response=>{
+                setUrl("https://link-short-url.herokuapp.com/"+response.data.short_link+"/")
                 setCheckCopy(true)
             })
         }

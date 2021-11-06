@@ -34,7 +34,7 @@ const Signup = () => {
                 var config={
                     headers:{'Content-Type':'application/json'}
                 }
-                axios.post('http://127.0.0.1:8000/accounts_api/signup/', signupData, config).then(response=> {
+                axios.post('https://link-short-url.herokuapp.com/accounts_api/signup/', signupData, config).then(response=> {
                     setIsSignup(true)
                     setIncorrect(false)
                 })

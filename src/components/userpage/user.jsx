@@ -34,7 +34,7 @@ const Userpage = (props) => {
                     'Authorization':`Token ${props.location.state.token.token}`
                 }
             }
-            axios.get(`http://127.0.0.1:8000/url_api/user_url_list/${user}/`, config).then(response=>{
+            axios.get(`https://link-short-url.herokuapp.com/url_api/user_url_list/${user}/`, config).then(response=>{
                 setUrlList(response.data)
             })
         }
@@ -64,8 +64,8 @@ const Userpage = (props) => {
                     }
                 }
 
-                axios.post('http://127.0.0.1:8000/url_api/create_user_link/', url_data, config).then(response=>{
-                    setUrl("http://localhost:3000/"+response.data.short_link+"/")
+                axios.post('https://link-short-url.herokuapp.com/url_api/create_user_link/', url_data, config).then(response=>{
+                    setUrl("https://link-short-url.herokuapp.com/"+response.data.short_link+"/")
                     setData(response.data)
                     setUpdateVisi(true)
                     setCkuname(false)
@@ -105,8 +105,8 @@ const Userpage = (props) => {
                 }
             }
 
-            axios.put(`http://127.0.0.1:8000/url_api/edit_user_link/${data.id}/`, url_data, config).then(response=>{
-                setUrl("http://localhost:3000/"+response.data.short_link+"/")
+            axios.put(`https://link-short-url.herokuapp.com/url_api/edit_user_link/${data.id}/`, url_data, config).then(response=>{
+                setUrl("https://link-short-url.herokuapp.com/"+response.data.short_link+"/")
                 setUpdateVisi(true)
                 setShortVisi(false)
                 handleIsupdate()
@@ -137,7 +137,7 @@ const Userpage = (props) => {
                 }
             }
 
-            axios.delete(`http://127.0.0.1:8000/url_api/delete_user_link/${value}/`, config).then(response=>{
+            axios.delete(`https://link-short-url.herokuapp.com/url_api/delete_user_link/${value}/`, config).then(response=>{
                 setHanDelete(value)
             })
         }
